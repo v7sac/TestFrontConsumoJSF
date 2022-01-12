@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">	
+<head><style type="text/css">
+body{
+max-width:750px;
+font-size:11px;
+border:dashed 1px red;
+
+}
+.botonDeEnlace {
+	color: #fff !important;
+	text-transform: uppercase;
+	text-decoration: none;
+	background: #6394fdff;
+	padding: 4px;
+	border-radius: 3px;
+	display: inline;
+	border: none;
+	transition: all 0.4s ease 0s;
+}
+.botonDeEnlace:hover {
+	background: #434343;
+	letter-spacing: 1px;
+	-webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+	-moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+	box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+	transition: all 0.4s ease 0s;
+}
+form{
+display:inline;
+}
+fieldset{
+display:inline;
+}
+input[type=text]{
+    display:inline;
+    border:2px solid #aaa;
+    border-radius:2px;
+    margin:3px;
+    outline:none;
+    padding:3px;
+    box-sizing:border-box;
+    transition:.3s;
+  }
+  input[type=text]:focus{
+    border-color:dodgerBlue;
+    box-shadow:0 0 4px 0 dodgerBlue;
+  }
+ legend{
+  font-size:10px;
+ }
+.gbpowerby{
+  display:block;
+  border-collapse:collapse;
+  width: auto;
+  heigh: auto;
+  min-width: 400px;
+  color:white;
+  font-size:8px;
+  background-color:#6394fdff;
+}
+.logoHead{
+ display:inline;
+ max-width:130px;
+}
+.h2Head{
+ display:inline-block;
+ font-size:14px;
+ font-weight:bold;
+ font-family: "Gill Sans Extrabold", Helvetica, sans-serif;
+ background-color:#80b3ffff;
+ color:#fff;
+ padding:7px;
+}
+.h2Anuncio{
+font-size:14px;
+ font-weight:bold;
+ font-family: "Gill Sans Extrabold", Helvetica, sans-serif;
+ background-color:#80b3ffff;
+ color:#fff;
+ padding:7px;
+}
+.styled-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.styled-table thead tr {
+    background-color: #6394fdff;
+    color: #ffffff;
+    text-align: left;
+}
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+.styled-table tbody tr {
+    border-bottom: 1px solid #6394fdff;
+}
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #355bc6ff;
+}
+.styled-table tbody tr.active-row {
+    font-weight: bold;
+    color: #355bc6ff;
+}
+.styled-table tbody tr:hover td{
+    font-weight: bold;
+    color: #355bc6ff;
+}
+
+</style>
+</head>
+<body>
+<p:dataTable value="#{viewEmployeesManagedBean.employees}" var="employee">
+	<p:column>
+		<f:facet name="header">
+			<h:outputText value="PLACA"></h:outputText>
+		</f:facet>
+		<h:outputText value="#{employee.placa}"></h:outputText>
+	</p:column>
+        <p:column>
+		<f:facet name="header">
+			<h:outputText value="EMPRESA"></h:outputText>
+		</f:facet>
+		<h:outputText value="#{employee.empresa}"></h:outputText>
+	</p:column>
+	
+	<p:column>
+		<f:facet name="header">
+			<h:outputText value="IDENTIFICACION"></h:outputText>
+		</f:facet>
+		<h:outputText value="#{employee.identificacion}"></h:outputText>
+	</p:column>	
+
+</p:dataTable>
+</body>
+</html>
